@@ -1,4 +1,4 @@
-/* RESET & BASE */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,19 +11,16 @@ body {
   transition: background 0.4s, color 0.4s;
 }
 
-/* DARK MODE */
 body.dark {
   background: #0f172a;
   color: white;
 }
 
-/* LIGHT MODE */
 body.light {
   background: #f8fafc;
   color: #0f172a;
 }
 
-/* THEME TOGGLE BUTTON */
 .theme-toggle {
   position: fixed;
   top: 15px;
@@ -36,7 +33,6 @@ body.light {
   z-index: 1000;
 }
 
-/* INTRO SECTION */
 .intro {
   height: 100vh;
   display: flex;
@@ -66,7 +62,6 @@ body.light {
   to { opacity:1; transform: translateY(0); }
 }
 
-/* PROJECTS SECTION */
 .projects {
   padding: 60px 20px;
   max-width: 900px;
@@ -88,7 +83,6 @@ body.light {
   color: inherit;
 }
 
-/* PROJECT CARDS */
 .project-card {
   background: rgba(255,255,255,0.05);
   padding: 20px;
@@ -105,7 +99,6 @@ body.light .project-card { background: white; color:#0f172a; }
 .project-card ul { padding-left: 20px; }
 .project-card.show { opacity:1; transform:translateY(0); }
 
-/* NEXT BUTTON */
 .next-btn {
   margin-top: 30px;
   padding: 12px 25px;
@@ -121,7 +114,6 @@ body.light .project-card { background: white; color:#0f172a; }
 .next-btn:hover { background:#0ea5e9; }
 .next-btn:active { transform: scale(0.95); }
 
-/* ABOUT ME */
 .about-me {
   padding: 60px 20px;
   text-align: center;
@@ -131,7 +123,6 @@ body.light .project-card { background: white; color:#0f172a; }
 }
 .about-me.show { opacity:1; transform: translateY(0); }
 
-/* ABOUT ME IMAGE */
 .about-img {
   width: 450px;
   height: 450px;
@@ -141,11 +132,10 @@ body.light .project-card { background: white; color:#0f172a; }
   border: 3px solid #38bdf8;
 }
 
-/* BIO TEXT */
 .bio {
   font-size: 1.2rem;
   line-height: 1.8;
 }
 
-/* HIDDEN */
 .hidden { display:none; }
+
