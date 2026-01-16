@@ -10,17 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("themeToggle");
   const body = document.body;
 
-  // FUNCTION TO ANIMATE PROJECT CARDS AND NEXT BUTTON
   function animateProjects() {
-    cards.forEach(card => card.classList.remove("show")); // reset
-    nextToAbout.classList.remove("show"); // reset
+    cards.forEach(card => card.classList.remove("show"));
+    nextToAbout.classList.remove("show");
     cards.forEach((card, index) => {
       setTimeout(() => card.classList.add("show"), index * 200);
     });
     setTimeout(() => { nextToAbout.classList.add("show"); }, cards.length * 200 + 200);
   }
 
-  // VIEW WORK → show PROJECTS
   viewWorkBtn.addEventListener("click", () => {
     intro.style.opacity = "0";
     setTimeout(() => {
@@ -30,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 600);
   });
 
-  // BACK BUTTON → go back to INTRO
   backBtn.addEventListener("click", () => {
     projects.classList.add("hidden");
     intro.style.display = "flex";
@@ -41,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 100);
   });
 
-  // NEXT → show ABOUT ME
   nextToAbout.addEventListener("click", () => {
     projects.style.opacity = "0";
     setTimeout(() => {
@@ -52,19 +48,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 500);
   });
 
-  // BACK FROM ABOUT → Projects (animations restored)
   backFromAbout.addEventListener("click", () => {
     aboutMe.classList.add("hidden");
     aboutMe.classList.remove("show");
 
     projects.classList.remove("hidden");
-    animateProjects(); // <-- restore animations when coming back
+    animateProjects(); 
   });
 
-  // THEME TOGGLE
   themeToggle.addEventListener("click", () => {
     body.classList.toggle("light");
     body.classList.toggle("dark");
     themeToggle.textContent = body.classList.contains("dark") ? "🌙" : "☀️";
   });
 });
+
